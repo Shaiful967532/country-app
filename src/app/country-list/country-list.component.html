@@ -1,0 +1,18 @@
+<div class="country-list">
+  <div
+    *ngFor="let country of countries"
+    class="country-card"
+    (click)="selectCountry(country)"
+  >
+    <img
+      [src]="country.flag"
+      alt="{{ country.name }} flag"
+      class="country-flag"
+      onerror="this.onerror=null;this.src='default-flag-url.png';"
+    />
+    <h3>{{ country.name }}</h3>
+    <p><strong>Capital:</strong> {{ country.capital }}</p>
+    <p><strong>Region:</strong> {{ country.region }}</p>
+    <p><strong>Population:</strong> {{ country.population | number }}</p>
+  </div>
+</div>

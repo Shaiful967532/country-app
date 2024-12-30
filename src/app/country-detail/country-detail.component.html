@@ -1,0 +1,9 @@
+
+<div *ngIf="country">
+    <h2>{{ country.name.common }}</h2>
+    <p><strong>Official Name:</strong> {{ country.name.official }}</p>
+    <p><strong>Capital:</strong> {{ country.capital[0] }}</p>
+    <p><strong>Region:</strong> {{ country.region }}</p>
+    <p><strong>Currency:</strong> {{ country.currencies ? getCurrencyInfo(country.currencies) : 'N/A' }}</p>
+  </div>
+  
